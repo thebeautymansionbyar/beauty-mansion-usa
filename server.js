@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const KOMMO_TOKEN = process.env.KOMMO_TOKEN;
 const PIPELINE_ID = 13507143;
-const API_BASE = 'https://api-c.kommo.com/api/v4';
+const API_BASE = 'https://thebeautymansion.kommo.com/api/v4';
 
 // Stages USA
 const STAGES = {
