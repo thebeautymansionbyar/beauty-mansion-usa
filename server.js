@@ -32,11 +32,7 @@ function getHeaders() {
 async function createLead(fullName) {
   const response = await axios.post(
     API_BASE + '/leads',
-    {
-      name: fullName,
-      pipeline_id: PIPELINE_ID,
-      status_id: STAGES['lead-frio-usa']
-    },
+    [{ name: fullName, pipeline_id: PIPELINE_ID, status_id: STAGES['lead-frio-usa'] }],
     { headers: getHeaders() }
   );
   return response.data._embedded.leads[0].id;
